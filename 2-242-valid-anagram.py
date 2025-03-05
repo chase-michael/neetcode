@@ -6,8 +6,8 @@ class Solution:
         charCount = [0] * 26
 
         for i in range(len(s)):
-            charCount[ord(s[i]) - 97] += 1
-            charCount[ord(t[i]) - 97] -= 1
+            charCount[ord(s[i]) - ord('a')] += 1
+            charCount[ord(t[i]) - ord('a')] -= 1
 
         return all(x == 0 for x in charCount)
 
